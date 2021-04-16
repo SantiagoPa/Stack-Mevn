@@ -4,7 +4,7 @@
             <a href="/" class="navbar-brand p-2">MEVN Stack</a>
         </nav>
 
-        <div class="container">
+        <div class="container-fluid">
             <div class="row pt-5">
                 <div class="col-md-5">
                     <div class="card">
@@ -41,13 +41,21 @@
                                 <td>{{task.title}}</td>
                                 <td>{{task.description}}</td>
                                 <td>
-                                    <button @click="deleteTask(task._id)" class="btn btn-danger">
-                                        delete
-                                    </button>
-                                    <button @click="editTask(task._id)"
-                                    class="btn btn-secondary">
-                                        edit
-                                    </button>
+                                    <div class="row row align-items-center">
+                                        <div class="col">
+                                             <button @click="deleteTask(task._id)
+                                            " class="btn btn-danger 
+                                            btn-sm">
+                                                delete
+                                            </button>
+                                        </div>
+                                        <div class="col">
+                                            <button @click="editTask(task._id)"
+                                            class="btn btn-secondary btn-sm">
+                                                edit
+                                            </button>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                         </tbody>
